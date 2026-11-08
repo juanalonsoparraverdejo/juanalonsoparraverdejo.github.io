@@ -41,10 +41,10 @@ a:focus-visible { outline: 3px solid #a77dc9; outline-offset: 4px; }
 .main-nav a:hover { color: var(--accent-deep); }
 .main-nav .nav-contact { color: var(--accent-deep); font-weight: 700; }
 .theme-toggle {
-  display: inline-flex; flex: 0 0 104px; width: 104px; min-width: 104px; max-width: 104px;
-  align-items: center; justify-content: center; gap: 8px; min-height: 36px; padding: 6px 10px;
+  display: inline-flex; flex: 0 0 112px; width: 112px; min-width: 112px; max-width: 112px;
+  align-items: center; justify-content: center; gap: 8px; min-height: 40px; padding: 7px 11px;
   border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--ink);
-  font: inherit; font-size: .76rem; font-weight: 680; white-space: nowrap; cursor: pointer; transition: border-color .18s, background .18s;
+  font: inherit; font-size: .8rem; font-weight: 680; white-space: nowrap; cursor: pointer; transition: border-color .18s, background .18s;
 }
 .theme-toggle:hover { border-color: var(--accent); background: var(--accent-pale); }
 .theme-toggle:focus-visible { outline: 3px solid #a77dc9; outline-offset: 3px; }
