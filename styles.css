@@ -1,7 +1,7 @@
 :root {
   color-scheme: light;
   --ink: #28212e;
-  --muted: #6e6575;
+  --muted: #504758;
   --soft: #918898;
   --line: #e8e2eb;
   --paper: #f8f6f9;
@@ -99,7 +99,7 @@ a:focus-visible { outline: 3px solid #a77dc9; outline-offset: 4px; }
 .strength-list span { padding: 7px 11px; border: 1px solid var(--line); border-radius: 6px; background: #fff; color: #554b5d; font-size: .82rem; }
 .interest-line { display: flex; align-items: center; flex-wrap: wrap; gap: 11px; margin-top: 22px; color: var(--accent-deep); font-size: .87rem; }
 .interest-line span { margin-right: 3px; color: var(--muted); }
-.interest-line i { color: #b7a9c1; font-style: normal; }
+.interest-line i { color: var(--accent); font-style: normal; }
 .stack-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .stack-card { padding: 19px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
 .stack-label { margin: 0; color: var(--accent-deep); font-size: .85rem; font-weight: 740; }
@@ -143,7 +143,7 @@ a:focus-visible { outline: 3px solid #a77dc9; outline-offset: 4px; }
 .certificate-card h3 { margin: 0; font-size: .88rem; line-height: 1.45; }
 .certificate-issuer { margin: 3px 0 0; color: var(--muted); font-size: .8rem; }
 .certificate-date { margin: 11px 0 0; color: #5e5563; font-size: .75rem; }
-.credential-id { margin: 6px 0 0; color: #817687; font: .66rem/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; overflow-wrap: anywhere; }
+.credential-id { margin: 6px 0 0; color: #5b5261; font: .66rem/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; overflow-wrap: anywhere; }
 .contact-section { display: flex; align-items: center; justify-content: space-between; gap: 28px; margin: 20px 0 55px; padding: 34px; border-radius: 11px; background: var(--accent-deep); color: #fff; }
 .contact-section .section-index { color: #d4c1e2; }
 .contact-section h2 { max-width: 650px; font-size: clamp(1.5rem, 3vw, 2rem); }
@@ -155,7 +155,7 @@ a:focus-visible { outline: 3px solid #a77dc9; outline-offset: 4px; }
 :root[data-theme="dark"] {
   color-scheme: dark;
   --ink: #f3edf7;
-  --muted: #c1b5ca;
+  --muted: #d6cddd;
   --soft: #a99bb2;
   --line: #413747;
   --paper: #17141b;
@@ -175,7 +175,7 @@ a:focus-visible { outline: 3px solid #a77dc9; outline-offset: 4px; }
 :root[data-theme="dark"] .project-status { background: #493b29; color: #f3d89c; }
 :root[data-theme="dark"] .certificate-brand { background: #3a2c46; color: #e2c5f6; }
 :root[data-theme="dark"] .certificate-date { color: #d0c4d7; }
-:root[data-theme="dark"] .credential-id { color: #b7a7c1; }
+:root[data-theme="dark"] .credential-id { color: #d6cddd; }
 :root[data-theme="dark"] .contact-section { background: #342641; }
 :root[data-theme="dark"] .button-primary { background: #d1b1e9; color: #25182e; }
 :root[data-theme="dark"] .button-primary:hover { background: #e2cdf2; }
