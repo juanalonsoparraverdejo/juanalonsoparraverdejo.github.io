@@ -10,6 +10,15 @@
     <meta property="og:type" content="website">
     <title>Juan Alonso Parra Verdejo | Portafolio</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : preferredTheme;
+      } catch {
+        document.documentElement.dataset.theme = 'light';
+      }
+    </script>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -24,6 +33,10 @@
           <a href="#formacion">Formación</a>
           <a href="#certificaciones">Certificaciones</a>
           <a class="nav-contact" href="#contacto">Contacto <span aria-hidden="true">↗</span></a>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Activar modo oscuro" aria-pressed="false">
+            <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.5A8.5 8.5 0 0 1 8.5 3.8 8.7 8.7 0 1 0 20.2 15.5Z"/></svg>
+            <span id="theme-label">Oscuro</span>
+          </button>
         </nav>
       </header>
 
@@ -164,6 +177,27 @@
 
       <footer class="site-footer"><span>© <span id="year"></span> Juan Alonso Parra Verdejo</span><span>Ingeniería en Informática · Mención en Ciencia de Datos</span></footer>
     </div>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      const themeButton = document.getElementById('theme-toggle');
+      const themeLabel = document.getElementById('theme-label');
+      const themeIcon = themeButton.querySelector('svg path');
+      const updateThemeButton = () => {
+        const isDark = document.documentElement.dataset.theme === 'dark';
+        themeButton.setAttribute('aria-pressed', String(isDark));
+        themeButton.setAttribute('aria-label', `Activar modo ${isDark ? 'claro' : 'oscuro'}`);
+        themeLabel.textContent = isDark ? 'Claro' : 'Oscuro';
+        themeIcon.setAttribute('d', isDark
+          ? 'M12 3v2m0 14v2M3 12h2m14 0h2M5.64 5.64l1.42 1.42m9.88 9.88 1.42 1.42m0-12.72-1.42 1.42m-9.88 9.88-1.42 1.42M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z'
+          : 'M20.2 15.5A8.5 8.5 0 0 1 8.5 3.8 8.7 8.7 0 1 0 20.2 15.5Z');
+      };
+      updateThemeButton();
+      themeButton.addEventListener('click', () => {
+        const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = nextTheme;
+        try { localStorage.setItem('portfolio-theme', nextTheme); } catch {}
+        updateThemeButton();
+      });
+    </script>
   </body>
 </html>
