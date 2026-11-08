@@ -41,13 +41,15 @@ a:focus-visible { outline: 3px solid #a77dc9; outline-offset: 4px; }
 .main-nav a:hover { color: var(--accent-deep); }
 .main-nav .nav-contact { color: var(--accent-deep); font-weight: 700; }
 .theme-toggle {
-  display: inline-flex; width: 104px; align-items: center; justify-content: center; gap: 8px; min-height: 36px; padding: 6px 10px;
+  display: inline-flex; flex: 0 0 104px; width: 104px; min-width: 104px; max-width: 104px;
+  align-items: center; justify-content: center; gap: 8px; min-height: 36px; padding: 6px 10px;
   border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--ink);
   font: inherit; font-size: .76rem; font-weight: 680; white-space: nowrap; cursor: pointer; transition: border-color .18s, background .18s;
 }
 .theme-toggle:hover { border-color: var(--accent); background: var(--accent-pale); }
 .theme-toggle:focus-visible { outline: 3px solid #a77dc9; outline-offset: 3px; }
-.theme-icon { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.7; }
+.theme-label { display: inline-block; width: 48px; text-align: center; }
+.theme-icon { flex: 0 0 17px; width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.7; }
 .hero {
   display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(280px, .7fr); align-items: center;
   gap: clamp(38px, 7vw, 92px); padding: 92px 0 88px;
