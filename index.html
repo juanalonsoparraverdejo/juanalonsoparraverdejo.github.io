@@ -16,9 +16,12 @@
     .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.project-card{display:flex;flex-direction:column;min-height:276px;padding:21px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(150deg,#142239,#101a29)}.project-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.project-type{color:var(--mint);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.status{padding:4px 8px;border-radius:999px;background:#59471b44;color:#f0cc75;font-size:.72rem;white-space:nowrap}.project-card h3{margin:20px 0 8px;font-size:1.1rem;line-height:1.3}.project-card p{margin:0;color:#aebdd2;font-size:.88rem}.project-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}.project-tags span{padding:4px 8px;border:1px solid #30445f;border-radius:5px;color:#bdcce0;font-size:.72rem}.project-link{margin-top:auto;padding-top:20px;color:var(--mint);font-size:.87rem;font-weight:700;text-decoration:none}.project-link:hover{text-decoration:underline}
     @media(max-width:900px){.project-grid{grid-template-columns:1fr 1fr}.project-card:last-child{grid-column:span 2}}
     @media(max-width:760px){.project-grid{grid-template-columns:1fr}.project-card:last-child{grid-column:auto}}
+    .skip-link{position:absolute;left:12px;top:-48px;padding:8px 12px;background:var(--mint);color:#08151b;border-radius:6px;font-weight:700;z-index:5}.skip-link:focus{top:12px}
+    @media print{.project-card,.project-tags span{background:#fff;border-color:#ccd3dc;color:#172033}.project-card p,.project-link{color:#4c596a}.project-card{min-height:0}.project-link{padding-top:10px}}
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <div class="shell">
     <nav class="topbar" aria-label="Navegación principal">
       <a class="brand" href="#inicio">J<span>.</span>APV</a>
@@ -28,7 +31,7 @@
       <div>
         <div class="eyebrow">Portafolio profesional · Santiago, Chile</div>
         <h1>Juan Alonso<br><span>Parra Verdejo</span></h1>
-        <p class="intro">Estudiante de Ingeniería en Informática, mención Ciencia de Datos, en Duoc UC. Me interesa especializarme en ciberseguridad a futuro y sigo ampliando mis conocimientos en esa área.</p>
+        <p class="intro">Estudiante de Ingeniería en Informática con mención en Ciencia de Datos en Duoc UC. Interesado en soluciones basadas en datos y en especializarme en ciberseguridad.</p>
         <div class="actions">
           <a class="btn" href="https://github.com/juanalonsoparraverdejo" target="_blank" rel="noopener noreferrer">Ver mi GitHub <span aria-hidden="true">↗</span></a>
           <button class="btn" type="button" onclick="window.print()">Guardar como PDF</button>
@@ -37,37 +40,37 @@
       <div class="hero-card" aria-label="Resumen profesional">
         <div class="card-label">Ciencia de Datos · Duoc UC</div>
         <div class="monogram" aria-hidden="true">JA<span style="color:#eef4ff">.</span></div>
-        <p>Formación en Ciencia de Datos y certificaciones en ciberseguridad, área en la que me gustaría especializarme a futuro.</p>
+        <p>Enfoque académico en Ciencia de Datos. Formación complementaria en ciberseguridad.</p>
         <div class="card-foot">Duoc UC <span aria-hidden="true">·</span> Cuarto semestre</div>
       </div>
     </header>
-    <main>
+    <main id="contenido">
       <section class="section" id="perfil">
-        <div class="section-head"><div><div class="section-kicker">01 / Sobre mí</div><h2>Perfil</h2></div><p class="section-note">Una base técnica que sigue creciendo con cada desafío.</p></div>
+        <div class="section-head"><div><div class="section-kicker">01 / Perfil</div><h2>Formación y objetivos</h2></div><p class="section-note">Informática · Ciencia de Datos · Ciberseguridad</p></div>
         <div class="about-grid">
-          <div class="about-copy"><p>Estudio Ingeniería en Informática, mención Ciencia de Datos, en Duoc UC. A futuro me gustaría especializarme en ciberseguridad; ya cuento con certificaciones profesionales en fundamentos, concientización, hacking ético y liderazgo en esa área.</p><p>Me caracterizo por la responsabilidad, la atención al detalle y la disposición para aprender, adaptarme a nuevos entornos y colaborar en equipo.</p></div>
+          <div class="about-copy"><p>Actualmente curso Ingeniería en Informática con mención en Ciencia de Datos en Duoc UC. Mi formación académica se complementa con certificaciones de CertiProf en fundamentos, concientización, hacking ético y liderazgo en ciberseguridad, área en la que me interesa especializarme.</p><p>Aporto responsabilidad, atención al detalle, disposición para aprender y experiencia colaborando en equipo.</p></div>
           <div class="facts"><div class="fact"><small>Ubicación</small><strong>Santiago, Chile</strong></div><div class="fact"><small>Disponibilidad</small><strong>Abierto a oportunidades profesionales</strong></div><div class="fact"><small>Movilidad</small><strong>Disponibilidad para viajar</strong></div></div>
         </div>
       </section>
       <section class="section" id="competencias">
-        <div class="section-head"><div><div class="section-kicker">02 / Lo que aporto</div><h2>Fortalezas y áreas de interés</h2></div><p class="section-note">Competencias personales y campos que forman parte de mi desarrollo profesional.</p></div>
-        <div class="skills"><span class="skill">Estudios en Ciencia de Datos</span><span class="skill">Interés en especializarme en ciberseguridad</span><span class="skill">Herramientas digitales</span><span class="skill">Observación y atención al detalle</span><span class="skill">Prevención de riesgos</span><span class="skill">Atención a clientes</span><span class="skill">Trabajo en equipo</span><span class="skill">Aprendizaje continuo</span></div>
+        <div class="section-head"><div><div class="section-kicker">02 / Perfil profesional</div><h2>Áreas de interés y fortalezas</h2></div><p class="section-note">Campos de formación e intereses, junto con competencias transversales.</p></div>
+        <div class="skills"><span class="skill">Ciencia de Datos · área de estudio</span><span class="skill">Ciberseguridad · interés de especialización</span><span class="skill">Herramientas digitales</span><span class="skill">Atención al detalle</span><span class="skill">Prevención de riesgos</span><span class="skill">Atención a clientes</span><span class="skill">Colaboración en equipo</span><span class="skill">Aprendizaje continuo</span></div>
       </section>
       <section class="section" id="formacion">
-        <div class="section-head"><div><div class="section-kicker">03 / Trayectoria</div><h2>Formación académica</h2></div></div>
+        <div class="section-head"><div><div class="section-kicker">03 / Formación</div><h2>Trayectoria académica</h2></div></div>
         <div class="study"><time>En curso · 2026</time><div><h3>Ingeniería en Informática, mención Ciencia de Datos</h3><p>Duoc UC · Cuarto semestre</p></div></div>
         <div class="study"><time>Finalizada</time><div><h3>Enseñanza media completa</h3><p>Liceo Carmen Arriarán</p></div></div>
       </section>
       <section class="section" id="proyectos">
-        <div class="section-head"><div><div class="section-kicker">04 / Trabajo en curso</div><h2>Proyectos</h2></div><p class="section-note">Proyectos académicos y colaborativos actualmente en desarrollo.</p></div>
+        <div class="section-head"><div><div class="section-kicker">04 / Experiencia aplicada</div><h2>Proyectos</h2></div><p class="section-note">Proyectos personales y académicos desarrollados en equipo.</p></div>
         <div class="project-grid">
-          <article class="project-card"><div class="project-top"><span class="project-type">Sitio web · Proyecto personal</span><span class="status">En desarrollo</span></div><h3>Centro Holístico Integral Amarte</h3><p>Sitio estático para presentar cursos, talleres y terapias, con enlaces de WhatsApp para consultas y reservas.</p><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div><a class="project-link" href="https://github.com/juanalonsoparraverdejo/centro-integral-amarte" target="_blank" rel="noopener noreferrer">Ver repositorio en GitHub ↗</a></article>
-          <article class="project-card"><div class="project-top"><span class="project-type">Desarrollo full stack · Equipo</span><span class="status">En desarrollo</span></div><h3>Gas El Volcán</h3><p>Tienda online responsiva con catálogo filtrable, carrito, checkout de demostración y administración local de productos. Proyecto académico en equipo.</p><div class="project-tags"><span>React</span><span>Vite</span><span>Bootstrap</span><span>Jasmine · Karma</span></div><a class="project-link" href="https://github.com/vicentevergara1/CASO-GAS" target="_blank" rel="noopener noreferrer">Ver repositorio en GitHub ↗</a></article>
-          <article class="project-card"><div class="project-top"><span class="project-type">Aplicación móvil · Equipo</span><span class="status">En desarrollo</span></div><h3>Notix — NotariaX</h3><p>Prototipo académico de aplicación Android para solicitudes y revisión de trámites notariales. Flujo y datos de demostración locales.</p><div class="project-tags"><span>Android</span><span>Kotlin</span><span>Jetpack Compose</span><span>MVVM</span></div><a class="project-link" href="https://github.com/Benja-ignacio/caso-NotariaX" target="_blank" rel="noopener noreferrer">Ver repositorio en GitHub ↗</a></article>
+          <article class="project-card"><div class="project-top"><span class="project-type">Proyecto personal · Sitio web</span><span class="status">En desarrollo</span></div><h3>Centro Holístico Integral Amarte</h3><p>Sitio estático para presentar cursos, talleres y terapias, y facilitar consultas al centro mediante WhatsApp.</p><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div><a class="project-link" href="https://github.com/juanalonsoparraverdejo/centro-integral-amarte" target="_blank" rel="noopener noreferrer">Explorar repositorio ↗</a></article>
+          <article class="project-card"><div class="project-top"><span class="project-type">Proyecto académico · Equipo</span><span class="status">En desarrollo</span></div><h3>Gas El Volcán</h3><p>Frontend de tienda online con catálogo filtrable, carrito, flujo de compra y administración de productos. Las funciones de pago y acceso son demostrativas; no incluye backend.</p><div class="project-tags"><span>React</span><span>Vite</span><span>Bootstrap</span><span>Jasmine · Karma</span></div><a class="project-link" href="https://github.com/vicentevergara1/CASO-GAS" target="_blank" rel="noopener noreferrer">Explorar repositorio ↗</a></article>
+          <article class="project-card"><div class="project-top"><span class="project-type">Proyecto académico · Equipo</span><span class="status">En desarrollo</span></div><h3>Notix — NotariaX</h3><p>Prototipo Android para gestionar solicitudes notariales y revisar trámites mediante perfiles de persona y notario. La información y los flujos son de demostración y se almacenan localmente.</p><div class="project-tags"><span>Kotlin</span><span>Android</span><span>Jetpack Compose</span><span>MVVM</span></div><a class="project-link" href="https://github.com/Benja-ignacio/caso-NotariaX" target="_blank" rel="noopener noreferrer">Explorar repositorio ↗</a></article>
         </div>
       </section>
       <section class="section" id="certificaciones">
-        <div class="section-head"><div><div class="section-kicker">05 / Aprendizaje especializado</div><h2>Certificaciones</h2></div><p class="section-note">Credenciales profesionales emitidas por CertiProf.</p></div>
+        <div class="section-head"><div><div class="section-kicker">05 / Formación complementaria</div><h2>Certificaciones profesionales</h2></div><p class="section-note">Credenciales emitidas por CertiProf.</p></div>
         <div class="cert-grid">
           <article class="cert"><div class="cert-top"><h3>Lead Cybersecurity Professional Certification (LCSPC) — Spanish</h3><span class="cert-mark" aria-hidden="true">CP</span></div><div class="issuer">CertiProf</div><div class="cert-meta">Expedición: octubre de 2026 · Vencimiento: octubre de 2029</div><div class="credential">ID: FLLLPLQTSDP-RGJFGSDGL-WQWKFTQHQZ</div></article>
           <article class="cert"><div class="cert-top"><h3>Ethical Hacking Professional Certification (CEHPC) — Spanish</h3><span class="cert-mark" aria-hidden="true">CP</span></div><div class="issuer">CertiProf</div><div class="cert-meta">Expedición: septiembre de 2026 · Vencimiento: septiembre de 2029</div><div class="credential">ID: JLRRDSRJLPH-WKKNVKBNV-YTYYYYBGWQ</div></article>
