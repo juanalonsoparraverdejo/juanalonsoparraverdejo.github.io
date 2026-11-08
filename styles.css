@@ -41,7 +41,7 @@ a:focus-visible { outline: 3px solid #a77dc9; outline-offset: 4px; }
 .main-nav a:hover { color: var(--accent-deep); }
 .main-nav .nav-contact { color: var(--accent-deep); font-weight: 700; }
 .theme-toggle {
-  display: inline-flex; align-items: center; gap: 8px; min-height: 36px; padding: 6px 10px;
+  display: inline-flex; width: 104px; align-items: center; justify-content: center; gap: 8px; min-height: 36px; padding: 6px 10px;
   border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--ink);
   font: inherit; font-size: .76rem; font-weight: 680; white-space: nowrap; cursor: pointer; transition: border-color .18s, background .18s;
 }
