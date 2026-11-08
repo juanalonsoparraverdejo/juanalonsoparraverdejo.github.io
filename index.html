@@ -19,7 +19,7 @@
         document.documentElement.dataset.theme = 'light';
       }
     </script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=2">
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -35,7 +35,7 @@
           <a class="nav-contact" href="#contacto">Contacto <span aria-hidden="true">↗</span></a>
           <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Activar modo oscuro" aria-pressed="false">
             <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.5A8.5 8.5 0 0 1 8.5 3.8 8.7 8.7 0 1 0 20.2 15.5Z"/></svg>
-            <span id="theme-label">Oscuro</span>
+            <span id="theme-label">Cambiar a modo oscuro</span>
           </button>
         </nav>
       </header>
@@ -186,7 +186,7 @@
         const isDark = document.documentElement.dataset.theme === 'dark';
         themeButton.setAttribute('aria-pressed', String(isDark));
         themeButton.setAttribute('aria-label', `Activar modo ${isDark ? 'claro' : 'oscuro'}`);
-        themeLabel.textContent = isDark ? 'Claro' : 'Oscuro';
+        themeLabel.textContent = `Cambiar a modo ${isDark ? 'claro' : 'oscuro'}`;
         themeIcon.setAttribute('d', isDark
           ? 'M12 3v2m0 14v2M3 12h2m14 0h2M5.64 5.64l1.42 1.42m9.88 9.88 1.42 1.42m0-12.72-1.42 1.42m-9.88 9.88-1.42 1.42M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z'
           : 'M20.2 15.5A8.5 8.5 0 0 1 8.5 3.8 8.7 8.7 0 1 0 20.2 15.5Z');
